@@ -374,6 +374,7 @@ class Solution {
 
 /**
  * Clasa principala unde se testeaza clasele
+ *
  */
 public class hw_lab2 {
     /**
