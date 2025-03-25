@@ -1,7 +1,11 @@
 package org.example;
-import java.time.LocalTime;
+import lombok.ToString;
 
-public class Flight {
+import java.time.LocalTime;
+import java.util.Collections;
+
+@ToString
+public class Flight implements Comparable<Flight>{
     private LocalTime departure;
     private LocalTime arrival;
 
@@ -25,5 +29,11 @@ public class Flight {
 
     public void setArrival(LocalTime arrival) {
         this.arrival = arrival;
+    }
+
+    @Override
+    public int compareTo(Flight ceva) {
+        if(ceva == null)throw new NullPointerException("obiect gol, nu pointeaza la nimic");
+        return this.arrival.compareTo(((Flight) ceva).getArrival());
     }
 }

@@ -1,6 +1,9 @@
 package org.example;
 import java.time.LocalTime;
 import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,19 +32,26 @@ public class Main {
         problem.printSolution();
 
 
+        System.out.println("\n**************BONUS***************\n");
         Random rand = new Random();
-        List<Runway> runways = Arrays.asList(new Runway(1), new Runway(2));
-        List<Flight> flights2 = new ArrayList<>();
+        List<Runway> runways_bonus = new ArrayList<>();
+        List<Flight> flights_bonus = new ArrayList<>();
+        int nrFlights = 1 + (int) (Math.random() * 1_000_000) % 25;
+        int nrRunways = 1 + (int) (Math.random() * 1_000_000) % nrFlights;
 
-        for (int i = 0; i < 21; i++) { // Generate random flights
-            LocalTime dep = LocalTime.of(rand.nextInt(24), rand.nextInt(60));
-            LocalTime arr = dep.plusMinutes(rand.nextInt(60) + 30);
-            flights2.add(new Flight(dep, arr));
+        for(int i = 0; i < nrRunways; i++){
+            runways_bonus.add(new Runway(i));
         }
-
-        BonusLab4 scheduler = new BonusLab4(runways, flights2);
-        scheduler.scheduleFlights();
-        scheduler.printSchedule();
+        for (int i = 1; i <= nrFlights; i++) {
+            LocalTime departure = LocalTime.of(8 + (i % 4), (i * 10) % 60);
+            LocalTime arrival = departure.plusMinutes((int) (Math.random() * 1_000_000) % 25 + (i * 6) % 15);
+            flights_bonus.add(new Flight(departure, arrival));
+        }
+        var bonus = new Bonus(runways_bonus, flights_bonus, new HashMap<>());
+        for (Runway r : runways_bonus) {
+            bonus.getSolution().put(r, new ArrayList<>());
+        }
+        bonus.findSolution();
     }
 
 }
