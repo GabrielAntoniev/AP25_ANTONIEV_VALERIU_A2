@@ -24,3 +24,5 @@ Lab3:
 homework: Se ia fiecare zbor si se verifica daca exista o pista care nu este deja ocupata. Daca se gaseste o prima pista care nu este ocupata, atunci acel zbor ii va corespunde pista gasita, si perioada
 in care pista este ocupata va fi in functie de diferenta dintre ora sosirii si ora plecarii. O pista poate fi folosita daca ora de sosire a ultimului zbor asociat pistei este mai mica decat ora de plecare
 a unui alt zbor.
+bonus: Am implementat un algoritm greedy care mai intai ordoneaza zborurile dupa timpul de sosire si asigneaza fiecare zbor la un runway daca cand este adaugat nu strica conditia ca fiecare runway sa aiba
+diferenta dintre numarul de zboruri <=1
