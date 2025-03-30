@@ -1,5 +1,5 @@
 package org.example;
 
 public enum Type{
-    friendly, neutral, enemy;
+    FRIENDLY, NEUTRAL, ENEMY;
 }

@@ -1,6 +1,9 @@
 package org.example;
 
 import lombok.*;
+import com.github.javafaker.Faker;
+
+import java.util.Random;
 
 @AllArgsConstructor
 @ToString
@@ -9,16 +12,23 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 @NoArgsConstructor
-public class Location implements Comparable{
+public class Location implements Comparable<Object>{
+
     private String name;
     private Type type;
 
     public boolean isFriendly(){
-        return this.type.equals(Type.friendly);
+        return this.type.equals(Type.FRIENDLY);
     }
 
     public boolean isEnemy(){
-        return this.type.equals(Type.enemy);
+        return this.type.equals(Type.ENEMY);
+    }
+
+    public Location generateRandomLocation(Random random){
+        this.name = new Faker().address().city();
+        this.type = Type.values()[random.nextInt(3)];
+        return this;
     }
 
     @Override
