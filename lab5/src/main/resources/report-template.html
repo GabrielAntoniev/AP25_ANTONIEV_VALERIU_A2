@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Report - ${repositoryName}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .image-row {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .image-row img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border: 1px solid #aaa;
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-block h2 {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Image Report: ${repositoryName}</h1>
+
+<#list images as img>
+<div class="image-row">
+    <img src="${img.path}" alt="${img.name}">
+    <div class="info-block">
+        <h2>${img.name}</h2>
+        <p><strong>Date:</strong> ${img.date}</p>
+        <p><strong>Path:</strong> ${img.path}</p>
+    </div>
+</div>
+</#list>
+
+</body>
+</html>

@@ -55,7 +55,7 @@ class Main{
 
         Random random = new Random();
 
-        int nrLocations = 2+ random.nextInt(20);
+        int nrLocations = 2+ random.nextInt(100);
         int nrEdges = 1+ random.nextInt((nrLocations*(nrLocations-1))/2);
 
         System.out.println("Nr. nodes : " + nrLocations + "; Nr. edges : " + nrEdges);

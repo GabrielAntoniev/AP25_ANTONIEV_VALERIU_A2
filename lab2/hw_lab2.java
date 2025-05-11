@@ -388,8 +388,8 @@ public class hw_lab2 {
      */
     public static void main(String args[]) {
 
-        Teacher teacher1 = new Teacher("Frasinaru", LocalDate.of(1980, 5, 14), new Project[0]);
-        Teacher teacher2 = new Teacher("Patrut", LocalDate.of(1975, 8, 21), new Project[0]);
+        Teacher teacher1 = new Teacher("Frasinaru", LocalDate.of(1980, 5, 14), null);
+        Teacher teacher2 = new Teacher("Patrut", LocalDate.of(1975, 8, 21), null);
 
         Project project1 = new Project("AI", teacher1);
         Project project2 = new Project("Web Development", teacher2);
