@@ -24,5 +24,12 @@ Lab3:
 homework: Se ia fiecare zbor si se verifica daca exista o pista care nu este deja ocupata. Daca se gaseste o prima pista care nu este ocupata, atunci acel zbor ii va corespunde pista gasita, si perioada
 in care pista este ocupata va fi in functie de diferenta dintre ora sosirii si ora plecarii. O pista poate fi folosita daca ora de sosire a ultimului zbor asociat pistei este mai mica decat ora de plecare
 a unui alt zbor.
+
 bonus: Am implementat un algoritm greedy care mai intai ordoneaza zborurile dupa timpul de sosire si asigneaza fiecare zbor la un runway daca cand este adaugat nu strica conditia ca fiecare runway sa aiba
 diferenta dintre numarul de zboruri <=1
+
+Lab4:
+homework: Am initializat un numar de locatii ce vor fi noduri, si niste muchii intre aceste noduri, am construit un digraf, am ales un nod de start random si am declarat o variabila alg de tipul
+DijkstraShortestPathHeap care rezolva problema drumurilor de cost minim intr-un digraf. Apoi pentru fiecare Type (friendly, neutral, enemy) am grupat locatiile corespunzator.
+
+bonus: este asemenator cu ce am facut la tema, doar ca am folosit un obiect care este o instanta a clasei FloydWarshallShortestPath, cu care am aflat cel mai sigur drum (in loc de cost, am inlocuit cu probabilitatea de trecere sigura din enunt) intre oricare 2 noduri, si pentru toate rutele am calculat cate noduri friendly, neutral si enemy erau. Am folosit biblioteca Graph4j
