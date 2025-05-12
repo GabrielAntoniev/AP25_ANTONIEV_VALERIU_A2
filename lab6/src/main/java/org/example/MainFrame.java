@@ -1,8 +1,13 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.awt.*;
 import javax.swing.JFrame;
 
+@Getter
+@Setter
 public class MainFrame extends JFrame {
     ConfigPanel configPanel;
     ControlPanel controlPanel;
@@ -12,7 +17,6 @@ public class MainFrame extends JFrame {
         super("Puncte Puncte Puncte...");
         init();
     }
-
 
     private void init() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

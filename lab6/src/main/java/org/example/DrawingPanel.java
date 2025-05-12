@@ -13,6 +13,7 @@ public class DrawingPanel extends JPanel {
     private final int dotSize = 20;
 
     private Point selectedPoint = null;
+    protected boolean playerTurn = true;
 
     private ArrayList<Point> dots;
     private ArrayList<Line> lines;
@@ -34,7 +35,7 @@ public class DrawingPanel extends JPanel {
 
     public void generateDots(int count) {
         dots.clear();
-        lines.clear(); // Clear existing lines too if any
+        lines.clear();
         canvasWidth = getWidth();
         canvasHeight = getHeight();
         Random rand = new Random();
@@ -53,7 +54,8 @@ public class DrawingPanel extends JPanel {
                     selectedPoint = dot;
                 } else {
                     if (!selectedPoint.equals(dot)) {
-                        lines.add(new Line(selectedPoint, dot));
+                        lines.add(new Line(selectedPoint, dot, playerTurn));
+                        playerTurn = !playerTurn;
                     }
                     selectedPoint = null;
                     repaint();
@@ -65,7 +67,7 @@ public class DrawingPanel extends JPanel {
 
     public void addLine(int index1, int index2) {
         if (index1 >= 0 && index2 >= 0 && index1 < dots.size() && index2 < dots.size()) {
-            lines.add(new Line(dots.get(index1), dots.get(index2)));
+            lines.add(new Line(dots.get(index1), dots.get(index2), playerTurn));
             repaint();
         }
     }
@@ -86,27 +88,37 @@ public class DrawingPanel extends JPanel {
             g.fillOval(p.x - dotSize / 2, p.y - dotSize / 2, dotSize, dotSize);
         }
 
-        if (selectedPoint != null) {
-            g.setColor(Color.RED);
-            g.drawOval(selectedPoint.x - dotSize / 2 - 2, selectedPoint.y - dotSize / 2 - 2,
-                    dotSize + 4, dotSize + 4);
-        }
+//        if (selectedPoint != null) {
+//            g.setColor(Color.RED);
+//            g.drawOval(selectedPoint.x - dotSize / 2 - 2, selectedPoint.y - dotSize / 2 - 2,
+//                    dotSize + 4, dotSize + 4);
+//        }
     }
 
     private void paintLines(Graphics2D g) {
-        g.setColor(Color.BLACK);
         for (Line line : lines) {
+            if(line.player){ // true -> red; false -> blue
+                g.setColor(Color.RED);
+                //int pastValue = Integer.parseInt(frame.getConfigPanel().getRed().getScoreLabel().getName());
+                int pastValue = frame.getConfigPanel().getRed().getScore();
+                frame.getConfigPanel().getRed().setScore(pastValue + (int) Math.sqrt( (line.p1.x - line.p2.x)*(line.p1.x - line.p2.x) + (line.p1.y - line.p2.y)*(line.p1.y - line.p2.y) ));
+            }
+            else {
+                g.setColor(Color.BLUE);
+                frame.getConfigPanel().getBlue().setScore(frame.getConfigPanel().getBlue().getScore() + (int) Math.sqrt( (line.p1.x - line.p2.x)*(line.p1.x - line.p2.x) + (line.p1.y - line.p2.y)*(line.p1.y - line.p2.y) ));
+            }
             g.drawLine(line.p1.x, line.p1.y, line.p2.x, line.p2.y);
         }
     }
 
-
     private static class Line {
         Point p1, p2;
+        boolean player;
 
-        Line(Point p1, Point p2) {
+        Line(Point p1, Point p2, boolean player) {
             this.p1 = p1;
             this.p2 = p2;
+            this.player = player;
         }
     }
 }

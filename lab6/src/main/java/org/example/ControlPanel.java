@@ -8,25 +8,24 @@ import java.awt.event.ActionEvent;
 public class ControlPanel extends JPanel {
     final MainFrame frame;
 
-    JButton loadBtn = new JButton("Load");
-    JButton saveBtn = new JButton("Save");
-    JButton exitBtn = new JButton("Exit");
+    JButton loadButton = new JButton("Load");
+    JButton saveButton = new JButton("Save");
+    JButton exitButton = new JButton("Exit");
 
     public ControlPanel(MainFrame frame) {
         this.frame = frame;
         init();
     }
 
-
     private void init() {
         setLayout(new GridLayout(1, 4));
 
-        add(loadBtn);
-        add(saveBtn);
-        add(exitBtn);
-        loadBtn.addActionListener(this::loadGame);
-        saveBtn.addActionListener(this::saveGame);
-        exitBtn.addActionListener(this::exitGame);
+        add(loadButton);
+        add(saveButton);
+        add(exitButton);
+        loadButton.addActionListener(this::loadGame);
+        saveButton.addActionListener(this::saveGame);
+        exitButton.addActionListener(this::exitGame);
     }
 
     private void exitGame(ActionEvent e) {
