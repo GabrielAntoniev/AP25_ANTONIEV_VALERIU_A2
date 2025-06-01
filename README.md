@@ -33,3 +33,24 @@ homework: Am initializat un numar de locatii ce vor fi noduri, si niste muchii i
 DijkstraShortestPathHeap care rezolva problema drumurilor de cost minim intr-un digraf. Apoi pentru fiecare Type (friendly, neutral, enemy) am grupat locatiile corespunzator.
 
 bonus: este asemenator cu ce am facut la tema, doar ca am folosit un obiect care este o instanta a clasei FloydWarshallShortestPath, cu care am aflat cel mai sigur drum (in loc de cost, am inlocuit cu probabilitatea de trecere sigura din enunt) intre oricare 2 noduri, si pentru toate rutele am calculat cate noduri friendly, neutral si enemy erau. Am folosit biblioteca Graph4j
+
+Lab5:
+homework: Pe langa comenzile cerute din enunt am mai implementat una create, care creeaza o colectie de imagini mai intai, si mai am si o comanda de exit. Am mai facut si o comanda de loadall. Am facut si
+3 exceptii custom 
+
+Lab6:
+homework: Am implementat logica aplicatiei, merge sa unesc puncte cu linii de culori diferite, rosu si albastru, la fiecare jucator se aduna punctajul sau care este distanta dintre cele 2 noduri pe care
+si le a ales pentru a trasa muchia
+
+Lab7:
+homework: Am pus un fisier in resources cu toate cuvintele din aspell, am facut join la threaduri, asa playerii se asteapta intre ei, fiecare player are un thread. Algoritmul de punctare al unui jucator functioneaza in
+felul urmator: un jucator isi alege niste Tiles, apoi se parcurge tot dictionarul pentru a afla cate cuvinte ar putea face match cu piesele lui pe care le a extras. Acela va fi punctajul jucatorului.
+
+Lab8:
+homework: Am folosit hikaricp pentru managementul conexiunilor la baza de date. Am parsat un csv si am inserat datele in baza de date.
+
+Lab9:
+homework: Am facut clasele care modeleaza tabelele din baza de date, Clasa AbstractRepository are 3 functii importante, de verificarea existentei unui obiect in baza de date, pentru a nu fi adaugat din nou.
+, una de adaugare in baza de date si una de findByName, functiile exist si findByName sunt abstracte, deci fiecare clasa repository derivata din AbstactClass va trebui sa le implementeze.
+
+Lab10 si 11: compulsory.
