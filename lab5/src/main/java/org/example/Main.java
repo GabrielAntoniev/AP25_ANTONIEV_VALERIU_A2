@@ -72,7 +72,6 @@ public class Main {
                 System.out.println("IO error: " + e.getMessage());
 
             } catch (Exception e) {
-                // Catch-all fallback for unexpected errors
                 System.out.println("Unexpected error: " + e.getClass().getSimpleName() + " - " + e.getMessage());
                 e.printStackTrace();
             }

@@ -1,0 +1,48 @@
+Jun 01, 2025 7:01:19 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 54 ms.
+Jun 01, 2025 7:01:19 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 2 ms.
+Jun 01, 2025 7:01:19 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 2 ms.
+Jun 01, 2025 7:01:19 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 1 ms.
+Jun 01, 2025 7:01:19 PM org.example.Main homework
+INFO: Find continent by name: Europe
+Jun 01, 2025 7:01:19 PM org.example.repository.CountryRepository findByName
+INFO: Executed query Country.findByName in 14 ms.
+Jun 01, 2025 7:01:19 PM org.example.repository.CountryRepository findByName
+INFO: Executed query Country.findByName in 2 ms.
+Jun 01, 2025 7:01:19 PM org.example.Main homework
+INFO: Find country by name: Belgium
+Jun 01, 2025 7:51:51 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 55 ms.
+Jun 01, 2025 7:51:51 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 2 ms.
+Jun 01, 2025 7:51:51 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 1 ms.
+Jun 01, 2025 7:51:51 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 1 ms.
+Jun 01, 2025 7:51:51 PM org.example.Main homework
+INFO: Find continent by name: Europe
+Jun 01, 2025 7:51:51 PM org.example.repository.CountryRepository findByName
+INFO: Executed query Country.findByName in 8 ms.
+Jun 01, 2025 7:51:51 PM org.example.repository.CountryRepository findByName
+INFO: Executed query Country.findByName in 2 ms.
+Jun 01, 2025 7:51:51 PM org.example.Main homework
+INFO: Find country by name: Belgium
+Jun 01, 2025 7:51:57 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 49 ms.
+Jun 01, 2025 7:51:57 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 2 ms.
+Jun 01, 2025 7:51:57 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 2 ms.
+Jun 01, 2025 7:51:57 PM org.example.repository.ContinentRepository findByName
+INFO: Executed query Continent.findByName in 2 ms.
+Jun 01, 2025 7:51:57 PM org.example.Main homework
+INFO: Find continent by name: Europe
+Jun 01, 2025 7:51:57 PM org.example.repository.CountryRepository findByName
+INFO: Executed query Country.findByName in 9 ms.
+Jun 01, 2025 7:51:57 PM org.example.repository.CountryRepository findByName
+INFO: Executed query Country.findByName in 1 ms.
+Jun 01, 2025 7:51:57 PM org.example.Main homework
+INFO: Find country by name: Belgium
