@@ -53,4 +53,6 @@ Lab9:
 homework: Am facut clasele care modeleaza tabelele din baza de date, Clasa AbstractRepository are 3 functii importante, de verificarea existentei unui obiect in baza de date, pentru a nu fi adaugat din nou.
 , una de adaugare in baza de date si una de findByName, functiile exist si findByName sunt abstracte, deci fiecare clasa repository derivata din AbstactClass va trebui sa le implementeze.
 
-Lab10 si 11: compulsory.
+Lab10: doar compulsory 
+Lab11:
+homework: controller pentru facut get/post/put/delete pentru city 
